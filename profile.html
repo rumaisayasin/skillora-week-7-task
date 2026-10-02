@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile — Skillora</title>
+
+    <meta name="description" content="View and manage your Skillora profile.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body data-page="profile">
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+            <span>Skill<span>ora</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#marketplace">Marketplace</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="profile.html" class="active dash-nav-link">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="freelancer-profile.html" class="login-btn">Public Profile</a>
+            <a href="create-service.html" class="register-btn">+ New Service</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#marketplace">Marketplace</a>
+        <a href="orders.html">Orders & Projects</a><a href="messages.html" class="nav-message-link">Messages <span class="nav-unread" id="navUnread">3</span></a>
+        <a href="freelancer-profile.html">Public Profile</a>
+        <a href="create-service.html">New Service</a>
+    </div>
+</header>
+
+<div class="page-banner">
+    <div class="breadcrumb"><a href="orders.html">Orders & Projects</a><a href="messages.html" class="nav-message-link">Messages <span class="nav-unread" id="navUnread">3</span></a> / My Profile</div>
+    <h1>My Profile</h1>
+    <p>This is how your account information is stored. Keep it up to date so clients know who they're hiring.</p>
+</div>
+
+<div class="dash-shell">
+
+    <aside class="dash-sidebar">
+        <a href="profile.html" class="active"><i class="fa-solid fa-user"></i> My Profile</a>
+        <a href="edit-profile.html"><i class="fa-solid fa-pen"></i> Edit Profile</a>
+        <hr>
+        <a href="my-services.html"><i class="fa-solid fa-briefcase"></i> My Services</a>
+        <a href="create-service.html"><i class="fa-solid fa-plus"></i> Create Service</a>
+        <hr>
+        <a href="freelancer-profile.html"><i class="fa-solid fa-eye"></i> Public Profile</a>
+    </aside>
+
+    <main class="dash-main">
+
+        <div class="panel">
+            <div class="profile-view-top">
+                <img id="pfAvatar" class="profile-view-avatar" src="" alt="Profile picture">
+
+                <div>
+                    <h2 id="pfName"></h2>
+                    <div class="role" id="pfTitle"></div>
+
+                    <div class="profile-view-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> <span id="pfLocation"></span></span>
+                        <span><i class="fa-solid fa-briefcase"></i> <span id="pfExperience"></span></span>
+                        <span><i class="fa-solid fa-star"></i> <span id="pfRating"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <a href="edit-profile.html" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Edit Profile</a>
+                <a href="freelancer-profile.html" class="btn btn-secondary"><i class="fa-solid fa-eye"></i> View Public Profile</a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head">
+                <div>
+                    <h2>About</h2>
+                </div>
+            </div>
+            <p id="pfBio" style="color:#aab0c4; font-size:13px; line-height:1.8;"></p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head">
+                <div><h2>Skills</h2></div>
+            </div>
+            <div class="profile-skills" id="pfSkills"></div>
+        </div>
+
+        <div class="panel" style="margin-bottom:0;">
+            <div class="profile-stats" style="grid-template-columns: repeat(2,1fr);">
+                <div class="profile-stat">
+                    <span>Active Services</span>
+                    <strong id="pfServiceCount">0</strong>
+                </div>
+                <div class="profile-stat">
+                    <span>Starting Price</span>
+                    <strong id="pfStartingPrice">$0</strong>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<footer id="about">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                <span>Skill<span>ora</span></span>
+            </a>
+            <p>Skillora connects businesses with talented professionals from around the world.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Skillora. All rights reserved.</span>
+        <span>Made for ambitious teams &amp; talented professionals.</span>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Success</span>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

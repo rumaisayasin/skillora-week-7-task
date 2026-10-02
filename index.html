@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skillora — Find Top Freelancers</title>
+
+    <meta
+        name="description"
+        content="Skillora is a professional freelancing marketplace connecting businesses with talented professionals worldwide."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </span>
+
+            <span>Skill<span>ora</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#home" class="active">Home</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="find-jobs.html">Find Jobs</a>
+            <a href="find-jobs.html">Categories</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+            <a href="orders.html">Orders & Projects</a><a href="marketplace.html?favorites=1">My Favorites</a><a href="advanced-dashboard.html">Dashboard</a><a href="messages.html" class="nav-message-link">Messages <span class="nav-unread" id="navUnread">3</span></a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="login-btn" id="loginBtn">
+                Login
+            </button>
+
+            <button class="register-btn" id="registerBtn">
+                Register
+            </button>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="find-jobs.html">Find Jobs</a>
+        <a href="find-jobs.html">Categories</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+        <a href="orders.html">Orders & Projects</a><a href="marketplace.html?favorites=1">My Favorites</a><a href="advanced-dashboard.html">Dashboard</a><a href="messages.html" class="nav-message-link">Messages <span class="nav-unread" id="navUnread">3</span></a>
+
+        <button id="mobileLogin">Login</button>
+        <button id="mobileRegister">Register</button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <span class="online-dot"></span>
+                Trusted by 25,000+ professionals
+            </div>
+
+            <h1>
+                Find the
+                <span>perfect talent</span>
+                for your next project.
+            </h1>
+
+            <p>
+                Discover verified freelancers, compare services,
+                explore portfolios and hire professionals who can
+                bring your ideas to life.
+            </p>
+
+            <div class="hero-search">
+
+                <div class="search-field">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="heroSearch"
+                        autocomplete="off"
+                        placeholder="Search services, skills or freelancers..."
+                    >
+
+                </div>
+
+                <button id="heroSearchBtn">
+                    Search
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+            <div class="popular-searches">
+
+                <span>Popular:</span>
+
+                <button data-search="Web Development">
+                    Web Development
+                </button>
+
+                <button data-search="UI UX Design">
+                    UI/UX Design
+                </button>
+
+                <button data-search="Digital Marketing">
+                    Digital Marketing
+                </button>
+
+                <button data-search="Video Editing">
+                    Video Editing
+                </button>
+
+            </div>
+
+            <div class="hero-trust">
+
+                <div class="avatars">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="">
+                    <img src="https://i.pravatar.cc/100?img=32" alt="">
+                    <img src="https://i.pravatar.cc/100?img=47" alt="">
+                    <img src="https://i.pravatar.cc/100?img=49" alt="">
+                    <span>+</span>
+                </div>
+
+                <div>
+                    <strong>4.9/5</strong>
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <small>
+                        Trusted by thousands of clients
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="floating-card card-one">
+
+                <div class="mini-icon purple">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div>
+                    <strong>Web Development</strong>
+                    <small>2,480+ Experts</small>
+                </div>
+
+            </div>
+
+
+            <div class="hero-profile">
+
+                <div class="profile-top">
+
+                    <span class="available">
+                        <span></span>
+                        Available
+                    </span>
+
+                    <button class="heart" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+                <img
+                    src="https://i.pravatar.cc/600?img=11"
+                    alt="Professional freelancer"
+                    class="hero-person"
+                >
+
+                <div class="hero-profile-info">
+
+                    <div>
+                        <h3>
+                            Alex Morgan
+                            <i class="fa-solid fa-circle-check"></i>
+                        </h3>
+
+                        <p>Senior Full Stack Developer</p>
+                    </div>
+
+                    <div class="rating">
+                        ★ 4.9
+                    </div>
+
+                </div>
+
+                <div class="hero-tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>TypeScript</span>
+                </div>
+
+                <div class="hero-price">
+                    <span>Starting at</span>
+                    <strong>$50/hr</strong>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card card-two">
+
+                <div class="mini-icon green">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <strong>Projects Completed</strong>
+                    <small>18,500+ projects</small>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card card-three">
+
+                <div class="mini-avatar">
+                    <img
+                        src="https://i.pravatar.cc/100?img=44"
+                        alt=""
+                    >
+                </div>
+
+                <div>
+                    <strong>Sarah Wilson</strong>
+                    <small>UI/UX Designer</small>
+                </div>
+
+                <span class="verified">✓</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats">
+
+    <div class="stats-container">
+
+        <div class="stat">
+            <i class="fa-solid fa-users"></i>
+
+            <div>
+                <strong>25K+</strong>
+                <span>Professionals</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <i class="fa-solid fa-globe"></i>
+
+            <div>
+                <strong>120+</strong>
+                <span>Countries</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <i class="fa-solid fa-briefcase"></i>
+
+            <div>
+                <strong>18K+</strong>
+                <span>Projects Completed</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <i class="fa-solid fa-star"></i>
+
+            <div>
+                <strong>4.9/5</strong>
+                <span>Average Rating</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section class="section categories-section" id="categories">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                EXPLORE TALENT
+            </span>
+
+            <h2>Popular categories</h2>
+
+            <p>
+                Find skilled professionals across the most
+                in-demand categories.
+            </p>
+
+        </div>
+
+        <button class="view-all" id="viewAllCategories">
+            View all categories
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <button
+            class="category-card"
+            data-category="Web Development"
+        >
+            <div class="category-icon purple-bg">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>Web Development</h3>
+            <p>4,820+ professionals</p>
+
+            <i class="fa-solid fa-arrow-right category-arrow"></i>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Graphic Design"
+        >
+            <div class="category-icon pink-bg">
+                <i class="fa-solid fa-pen-nib"></i>
+            </div>
+
+            <h3>Graphic Design</h3>
+            <p>3,650+ professionals</p>
+
+            <i class="fa-solid fa-arrow-right category-arrow"></i>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Mobile Development"
+        >
+            <div class="category-icon blue-bg">
+                <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+
+            <h3>Mobile Development</h3>
+            <p>2,940+ professionals</p>
+
+            <i class="fa-solid fa-arrow-right category-arrow"></i>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Data Analysis"
+        >
+            <div class="category-icon green-bg">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+
+            <h3>Data Analysis</h3>
+            <p>1,850+ professionals</p>
+
+            <i class="fa-solid fa-arrow-right category-arrow"></i>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Digital Marketing"
+        >
+            <div class="category-icon orange-bg">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+
+            <h3>Digital Marketing</h3>
+            <p>3,120+ professionals</p>
+
+            <i class="fa-solid fa-arrow-right category-arrow"></i>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Video Editing"
+        >
+            <div class="category-icon cyan-bg">
+                <i class="fa-solid fa-video"></i>
+            </div>
+
+            <h3>Video & Animation</h3>
+            <p>2,130+ professionals</p>
+
+            <i class="fa-solid fa-arrow-right category-arrow"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MARKETPLACE
+===================================================== -->
+
+<section
+    class="section marketplace-section"
+    id="marketplace"
+>
+
+    <div class="section-heading marketplace-heading">
+
+        <div>
+
+            <span class="section-label">
+                TOP PROFESSIONALS
+            </span>
+
+            <h2>Find the right freelancer</h2>
+
+            <p>
+                Compare verified professionals, services,
+                prices and ratings before you hire.
+            </p>
+
+        </div>
+
+        <div class="sort-box">
+
+            <label for="sortSelect">
+                Sort by
+            </label>
+
+            <select id="sortSelect">
+                <option value="rating">
+                    Highest Rated
+                </option>
+
+                <option value="price-low">
+                    Price: Low to High
+                </option>
+
+                <option value="price-high">
+                    Price: High to Low
+                </option>
+
+                <option value="reviews">
+                    Most Reviews
+                </option>
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- MARKETPLACE SEARCH -->
+
+    <div class="marketplace-search">
+
+        <div class="market-search-input">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="marketSearch"
+                placeholder="Search freelancers, services, skills..."
+            >
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                aria-label="Clear search"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <button
+            class="mobile-filter-toggle"
+            id="filterToggle"
+        >
+            <i class="fa-solid fa-sliders"></i>
+            Filters
+            <span id="filterCount">0</span>
+        </button>
+
+    </div>
+
+
+    <div class="marketplace-layout">
+
+        <!-- FILTER SIDEBAR -->
+
+        <aside
+            class="filter-sidebar"
+            id="filterSidebar"
+        >
+
+            <div class="filter-header">
+
+                <div>
+                    <h3>Filters</h3>
+                    <small>Refine your results</small>
+                </div>
+
+                <button id="clearFilters">
+                    Clear all
+                </button>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h4>Category</h4>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="Web Development"
+                    >
+                    <span>Web Development</span>
+                </label>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="Graphic Design"
+                    >
+                    <span>Graphic Design</span>
+                </label>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="Mobile Development"
+                    >
+                    <span>Mobile Development</span>
+                </label>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="Digital Marketing"
+                    >
+                    <span>Digital Marketing</span>
+                </label>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="Content Writing"
+                    >
+                    <span>Content Writing</span>
+                </label>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="Video Editing"
+                    >
+                    <span>Video Editing</span>
+                </label>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h4>Price per hour</h4>
+
+                <div class="price-inputs">
+
+                    <div>
+                        <span>$</span>
+
+                        <input
+                            type="number"
+                            id="minPrice"
+                            placeholder="Min"
+                            min="0"
+                        >
+                    </div>
+
+                    <span class="price-dash">—</span>
+
+                    <div>
+                        <span>$</span>
+
+                        <input
+                            type="number"
+                            id="maxPrice"
+                            placeholder="Max"
+                            min="0"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h4>Minimum rating</h4>
+
+                <div class="rating-filter">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="ratingFilter"
+                            value="0"
+                            checked
+                        >
+                        Any rating
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="ratingFilter"
+                            value="4">
+                        <span class="stars-small">★★★★★</span>
+                        4.0+
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="ratingFilter"
+                            value="4.5">
+                        <span class="stars-small">★★★★★</span>
+                        4.5+
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="ratingFilter"
+                            value="4.8">
+                        <span class="stars-small">★★★★★</span>
+                        4.8+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h4>Availability</h4>
+
+                <label class="check-row">
+                    <input
+                        type="checkbox"
+                        id="availableOnly"
+                    >
+                    <span>Available now</span>
+                </label>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RESULTS -->
+
+        <div class="marketplace-results">
+
+            <div class="results-toolbar">
+
+                <div>
+                    <strong id="resultsCount">
+                        12 professionals
+                    </strong>
+
+                    <span id="resultsDescription">
+                        matching your search
+                    </span>
+                </div>
+
+                <button
+                    class="mobile-close-filters"
+                    id="closeFilters"
+                >
+                    Done
+                </button>
+
+            </div>
+
+
+            <div
+                class="freelancer-grid"
+                id="freelancerGrid"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>No professionals found</h3>
+
+                <p>
+                    Try changing your search or removing
+                    some filters.
+                </p>
+
+                <button id="emptyClear">
+                    Clear Filters
+                </button>
+
+            </div>
+
+
+            <button
+                class="load-more"
+                id="loadMore"
+            >
+                Load More Professionals
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-section" id="how-it-works">
+
+    <div class="section">
+
+        <div class="center-heading">
+
+            <span class="section-label">
+                SIMPLE PROCESS
+            </span>
+
+            <h2>How Skillora works</h2>
+
+            <p>
+                Getting the right professional for your project
+                has never been easier.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>Find talent</h3>
+
+                <p>
+                    Search thousands of verified professionals
+                    based on skills, experience and budget.
+                </p>
+
+            </div>
+
+
+            <div class="step-line"></div>
+
+
+            <div class="step">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <h3>Connect & discuss</h3>
+
+                <p>
+                    Talk directly with professionals and
+                    discuss your project requirements.
+                </p>
+
+            </div>
+
+
+            <div class="step-line"></div>
+
+
+            <div class="step">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <h3>Start your project</h3>
+
+                <p>
+                    Hire your chosen professional and bring
+                    your project to life.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta-section">
+
+    <div class="cta-content">
+
+        <div>
+
+            <span class="section-label">
+                READY TO START?
+            </span>
+
+            <h2>
+                Build something amazing
+                with the right talent.
+            </h2>
+
+            <p>
+                Join thousands of businesses and professionals
+                already growing with Skillora.
+            </p>
+
+        </div>
+
+        <div class="cta-buttons">
+
+            <button
+                class="primary-button"
+                id="ctaFind"
+            >
+                Find a Freelancer
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button
+                class="secondary-button"
+                id="ctaJoin"
+            >
+                Become a Freelancer
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="about">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </span>
+
+                <span>Skill<span>ora</span></span>
+
+            </a>
+
+            <p>
+                Skillora connects businesses with talented
+                professionals from around the world.
+            </p>
+
+            <div class="socials">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>For Clients</h4>
+
+            <a href="find-jobs.html">Find Jobs</a>
+            <a href="#marketplace">Post a Project</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#marketplace">Success Stories</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>For Professionals</h4>
+
+            <a href="#marketplace">Find Jobs</a>
+            <a href="#">Create Profile</a>
+            <a href="#">Freelancer Resources</a>
+            <a href="#">Community</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Company</h4>
+
+            <a href="#about">About Skillora</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Skillora. All rights reserved.
+        </span>
+
+        <span>
+            Made for ambitious teams & talented professionals.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     PROFILE / SERVICE MODAL
+===================================================== -->
+
+<div
+    class="profile-modal"
+    id="profileModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-overlay"></div>
+
+    <div
+        class="profile-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="profileTitle"
+    >
+
+        <button
+            class="close-modal"
+            id="closeModal"
+            aria-label="Close profile"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="profileDetails"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+>
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>Success</span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

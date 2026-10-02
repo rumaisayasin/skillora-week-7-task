@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Skillora — Advanced Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="marketplace.css">
+</head>
+<body data-page="advanced-marketplace">
+<header class="navbar" id="navbar"><div class="nav-container">
+<a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-bolt"></i></span><span>Skill<span>ora</span></span></a>
+<nav class="desktop-nav">
+<a href="index.html">Home</a><a href="marketplace.html" class="active">Marketplace</a><a href="find-jobs.html">Find Jobs</a><a href="messages.html">Messages</a><a href="advanced-dashboard.html">Dashboard</a>
+</nav>
+<div class="nav-actions"><a class="login-btn nav-ghost" href="advanced-dashboard.html">My Dashboard</a><button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button></div>
+</div><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="find-jobs.html">Find Jobs</a><a href="messages.html">Messages</a><a href="advanced-dashboard.html">Dashboard</a></div></header>
+
+<main>
+<section class="market-hero"><div class="market-wrap">
+<div><span class="eyebrow">SKILLORA MARKETPLACE</span><h1>Find the right service.<br><span>Faster and smarter.</span></h1><p>Search services, freelancers and jobs with multi-filter discovery, saved items and instant results.</p></div>
+<div class="advanced-search" id="searchBar"><i class="fa-solid fa-magnifying-glass"></i><input id="marketSearch" type="search" placeholder="Search services, freelancers, jobs or categories…" autocomplete="off"><button id="clearSearch" class="icon-btn" title="Clear search"><i class="fa-solid fa-xmark"></i></button><button id="searchButton" class="search-submit">Search</button></div>
+<div class="quick-chips"><button data-query="Web Development">Web Development</button><button data-query="UI/UX Design">UI/UX Design</button><button data-query="Digital Marketing">Digital Marketing</button><button data-query="React">React</button><button data-query="SEO">SEO</button></div>
+</div></section>
+
+<section class="market-wrap marketplace-layout">
+<aside class="filter-panel" id="filterPanel">
+<div class="filter-head"><div><span class="eyebrow">REFINE</span><h2>Filters</h2></div><button id="closeFilters" class="mobile-close"><i class="fa-solid fa-xmark"></i></button></div>
+<div class="filter-group"><label>Result type</label><div class="check-list">
+<label><input type="checkbox" name="type" value="service" checked> Services</label><label><input type="checkbox" name="type" value="freelancer" checked> Freelancers</label><label><input type="checkbox" name="type" value="job" checked> Jobs</label></div></div>
+<div class="filter-group"><label for="categoryFilter">Category</label><select id="categoryFilter"><option value="">All categories</option></select></div>
+<div class="filter-group"><label>Price range <span id="priceLabel">$0 — $1,500+</span></label><div class="range-row"><input id="minPrice" type="number" min="0" value="0"><input id="maxPrice" type="number" min="0" value="1500"></div></div>
+<div class="filter-group"><label>Minimum rating</label><div class="rating-options"><label><input type="radio" name="rating" value="0" checked> Any rating</label><label><input type="radio" name="rating" value="4"> 4.0+ <span>★</span></label><label><input type="radio" name="rating" value="4.5"> 4.5+ <span>★</span></label><label><input type="radio" name="rating" value="4.8"> 4.8+ <span>★</span></label></div></div>
+<div class="filter-group"><label for="deliveryFilter">Delivery time</label><select id="deliveryFilter"><option value="">Any delivery</option><option value="3">Up to 3 days</option><option value="7">Up to 7 days</option><option value="14">Up to 14 days</option><option value="30">Up to 30 days</option></select></div>
+<div class="filter-group"><label for="experienceFilter">Experience level</label><select id="experienceFilter"><option value="">Any experience</option><option value="Entry">Entry</option><option value="Intermediate">Intermediate</option><option value="Expert">Expert</option></select></div>
+<button id="resetFilters" class="reset-btn"><i class="fa-solid fa-rotate-left"></i> Reset all filters</button>
+</aside>
+
+<div class="results-area">
+<div class="results-toolbar"><div><span class="eyebrow">DISCOVERY</span><h2>Marketplace results</h2><p id="resultsMeta">Preparing results…</p></div><div class="toolbar-actions"><button id="filterToggle" class="filter-mobile-btn"><i class="fa-solid fa-sliders"></i> Filters</button><select id="sortSelect" aria-label="Sort results"><option value="relevance">Relevance</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option><option value="rating">Highest Rating</option><option value="popular">Most Popular</option><option value="newest">Newest</option></select></div></div>
+<div id="activeFilters" class="active-filters"></div>
+<div id="resultsGrid" class="result-grid" aria-live="polite"></div>
+<div id="loadingState" class="state-card"><div class="loader"></div><h3>Loading marketplace</h3><p>Applying your discovery preferences…</p></div>
+<div id="emptyState" class="state-card hidden"><div class="state-icon"><i class="fa-regular fa-face-frown"></i></div><h3>No matches found</h3><p>Try removing a filter or searching a broader term.</p><button id="emptyReset" class="btn-primary">Reset search</button></div>
+<div id="pagination" class="pagination"></div>
+</div></section>
+</main>
+<div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i><span></span></div>
+<script src="marketplace.js"></script></body></html>

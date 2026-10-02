@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Profile — Skillora</title>
+
+    <meta name="description" content="Public freelancer profile on Skillora.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body data-page="freelancer-profile">
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+            <span>Skill<span>ora</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#marketplace">Marketplace</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="profile.html" class="dash-nav-link">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="profile.html" class="login-btn">Edit My Profile</a>
+            <a href="create-service.html" class="register-btn">+ New Service</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#marketplace">Marketplace</a>
+        <a href="orders.html">Orders & Projects</a>
+        <a href="create-service.html">New Service</a>
+    </div>
+</header>
+
+<div class="page-banner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Freelancer Profile</div>
+    <h1>Freelancer Profile</h1>
+    <p>This is how clients see this freelancer on Skillora.</p>
+</div>
+
+<div class="service-details-layout" style="grid-template-columns: 1fr;">
+
+    <div>
+        <div class="panel">
+            <div class="profile-view-top">
+                <img id="fpAvatar" class="profile-view-avatar" src="" alt="Freelancer photo">
+
+                <div>
+                    <h2 id="fpName"></h2>
+                    <div class="role" id="fpTitle"></div>
+
+                    <div class="profile-view-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> <span id="fpLocation"></span></span>
+                        <span><i class="fa-solid fa-briefcase"></i> <span id="fpExperience"></span></span>
+                        <span><i class="fa-solid fa-star"></i> <span id="fpRating"></span> (<span id="fpReviews"></span>)</span>
+                    </div>
+                </div>
+
+                <div style="margin-left:auto; text-align:right;">
+                    <small style="color:var(--muted); font-size:11px;">Starting at</small>
+                    <div style="font-size:20px; font-weight:800;" id="fpStartingPrice"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><div><h2>About</h2></div></div>
+            <p id="fpBio" style="color:#aab0c4; font-size:13px; line-height:1.8;"></p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><div><h2>Skills</h2></div></div>
+            <div class="profile-skills" id="fpSkills"></div>
+        </div>
+
+        <div class="panel" style="margin-bottom:0;">
+            <div class="panel-head"><div><h2>Services</h2></div></div>
+            <div class="my-services-grid" id="fpServices"></div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="about">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                <span>Skill<span>ora</span></span>
+            </a>
+            <p>Skillora connects businesses with talented professionals from around the world.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Skillora. All rights reserved.</span>
+        <span>Made for ambitious teams &amp; talented professionals.</span>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Success</span>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

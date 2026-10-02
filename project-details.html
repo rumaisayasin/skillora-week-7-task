@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Project Details | Skillora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+<header class="project-nav"><div class="project-nav-inner">
+<a class="project-brand" href="index.html"><span class="brand-mark">S</span>Skill<span>ora</span></a>
+<nav><a href="find-jobs.html">Find Jobs</a><a href="my-proposals.html">Proposals</a><a class="active" href="orders.html">Orders & Projects</a><a href="messages.html" class="nav-message-link">Messages <span class="nav-unread" id="navUnread">3</span></a><a href="profile.html">Dashboard</a></nav>
+<div class="nav-user"><span class="status-dot"></span><span>Online</span><img src="https://i.pravatar.cc/80?img=59" alt="Profile"></div><button class="project-menu" id="projectMenu">☰</button>
+</div></header>
+<main class="workspace details-workspace">
+<div class="back-row"><a href="orders.html">← Back to Orders & Projects</a><span id="lastUpdated"></span></div>
+<section id="projectHero" class="project-hero"></section>
+<section class="role-switch">
+<div><b>View as</b><span>Switch between client and freelancer workflows</span></div>
+<div class="role-buttons"><button class="active" data-role="freelancer">Freelancer view</button><button data-role="client">Client view</button></div>
+</section>
+<div class="details-grid">
+<div class="details-main">
+<section class="panel progress-panel" id="progressPanel"></section>
+<section class="panel" id="milestonesPanel"></section>
+<section class="panel" id="deliveryPanel"></section>
+<section class="panel activity-panel" id="activityPanel"></section>
+<section class="panel review-panel" id="reviewPanel"></section>
+</div>
+<aside class="details-side">
+<section class="panel" id="peoplePanel"></section>
+<section class="panel" id="contractPanel"></section>
+<section class="panel" id="actionPanel"></section>
+</aside>
+</div>
+</main>
+<div id="modalRoot"></div><div id="toast" class="toast"></div>
+<script src="project.js"></script>
+</body></html>

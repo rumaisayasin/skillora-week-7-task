@@ -1,0 +1,586 @@
+/* =====================================================
+   WEEK 3 — PROFILE & SERVICE SYSTEM
+   Extends style.css — uses the same design tokens
+===================================================== */
+
+.dash-nav-link {
+    color: #cfd3e6;
+}
+
+/* =====================================================
+   PAGE HEADER (breadcrumb style banner)
+===================================================== */
+
+.page-banner {
+    padding: 46px 24px 30px;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.breadcrumb a {
+    color: #9388ff;
+}
+
+.page-banner h1 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.page-banner p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+    max-width: 560px;
+}
+
+/* =====================================================
+   DASHBOARD SHELL
+===================================================== */
+
+.dash-shell {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px 80px;
+
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 26px;
+}
+
+.dash-sidebar {
+    align-self: start;
+    position: sticky;
+    top: 90px;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255,255,255,.02);
+    padding: 10px;
+}
+
+.dash-sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 14px;
+    border-radius: 10px;
+
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #b4bacb;
+
+    margin-bottom: 4px;
+}
+
+.dash-sidebar a i {
+    width: 16px;
+    text-align: center;
+    color: #6b7386;
+}
+
+.dash-sidebar a:hover {
+    background: rgba(255,255,255,.05);
+    color: white;
+}
+
+.dash-sidebar a.active {
+    background: var(--gradient);
+    color: white;
+}
+
+.dash-sidebar a.active i {
+    color: white;
+}
+
+.dash-sidebar hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 8px 6px;
+}
+
+.dash-main {
+    min-width: 0;
+}
+
+/* =====================================================
+   CARD SHELL (used for profile view + forms)
+===================================================== */
+
+.panel {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: linear-gradient(160deg, var(--card-2), var(--card));
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.panel-head h2 {
+    font-size: 17px;
+}
+
+.panel-head p {
+    color: var(--muted);
+    font-size: 11.5px;
+    margin-top: 3px;
+}
+
+/* =====================================================
+   PROFILE VIEW
+===================================================== */
+
+.profile-view-top {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-view-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.profile-view-top h2 {
+    font-size: 22px;
+}
+
+.profile-view-top .role {
+    color: #9388ff;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.profile-view-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 11.5px;
+}
+
+.profile-view-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.profile-view-meta i {
+    color: #ffc64c;
+}
+
+/* =====================================================
+   FORM ELEMENTS
+===================================================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #cfd3e6;
+    margin-bottom: 8px;
+}
+
+.form-group .hint {
+    display: block;
+    font-weight: 400;
+    color: #6b7386;
+    font-size: 10.5px;
+    margin-top: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: white;
+    font-size: 13px;
+    outline: 0;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--purple-light);
+}
+
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+    border-color: #ff5b6a;
+}
+
+.field-error {
+    display: none;
+    color: #ff8189;
+    font-size: 10.5px;
+    margin-top: 6px;
+}
+
+.form-group.error .field-error {
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: 0;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: white;
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,.06);
+    border: 1px solid var(--border);
+    color: white;
+}
+
+.btn-danger {
+    background: rgba(255,80,90,.12);
+    border: 1px solid rgba(255,80,90,.3);
+    color: #ff8b93;
+}
+
+.btn-small {
+    padding: 9px 14px;
+    font-size: 10.5px;
+    border-radius: 8px;
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* avatar / image upload */
+
+.upload-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.upload-preview {
+    width: 84px;
+    height: 84px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: var(--card);
+}
+
+.upload-preview.wide {
+    width: 140px;
+    height: 90px;
+    border-radius: 12px;
+}
+
+.upload-btn-wrap input[type="file"] {
+    display: none;
+}
+
+/* tag chips preview */
+
+.chip-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.chip-preview span {
+    padding: 6px 10px;
+    background: rgba(100,80,255,.1);
+    color: #9388ff;
+    border-radius: 6px;
+    font-size: 10px;
+}
+
+/* =====================================================
+   MY SERVICES GRID
+===================================================== */
+
+.my-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.my-service-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-service-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.my-service-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.my-service-cat {
+    color: #9388ff;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.my-service-body h3 {
+    font-size: 13.5px;
+    line-height: 1.4;
+}
+
+.my-service-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: auto;
+}
+
+.my-service-meta strong {
+    color: white;
+}
+
+.my-service-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    padding: 0 16px 16px;
+}
+
+.empty-mini {
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    color: var(--muted);
+}
+
+.empty-mini i {
+    font-size: 30px;
+    color: #444d64;
+    margin-bottom: 12px;
+}
+
+/* =====================================================
+   SERVICE DETAILS PAGE
+===================================================== */
+
+.service-details-layout {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 30px 24px 90px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+}
+
+.service-cover {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    max-height: 380px;
+    object-fit: cover;
+    margin-bottom: 22px;
+}
+
+.service-tags-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 16px 0 20px;
+}
+
+.service-tags-row span {
+    padding: 7px 11px;
+    background: rgba(100,80,255,.1);
+    color: #9388ff;
+    border-radius: 6px;
+    font-size: 10.5px;
+}
+
+.service-order-box {
+    align-self: start;
+    position: sticky;
+    top: 90px;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: linear-gradient(160deg, var(--card-2), var(--card));
+    padding: 22px;
+}
+
+.service-order-box .price-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.service-order-box .price-line strong {
+    font-size: 22px;
+}
+
+.order-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: var(--muted);
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+}
+
+.seller-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 6px;
+}
+
+.seller-mini img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.seller-mini strong {
+    font-size: 12.5px;
+    display: block;
+}
+
+.seller-mini span {
+    font-size: 10.5px;
+    color: var(--muted);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+    .dash-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .dash-sidebar {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        gap: 6px;
+    }
+
+    .dash-sidebar a {
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .my-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .service-order-box {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    .my-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-view-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-view-meta {
+        justify-content: center;
+    }
+
+    .my-service-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+}

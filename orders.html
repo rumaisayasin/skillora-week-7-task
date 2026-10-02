@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Orders & Projects | Skillora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+<header class="project-nav"><div class="project-nav-inner">
+<a class="project-brand" href="index.html"><span class="brand-mark">S</span>Skill<span>ora</span></a>
+<nav><a href="find-jobs.html">Find Jobs</a><a href="my-proposals.html">Proposals</a><a class="active" href="orders.html">Orders & Projects</a><a href="messages.html" class="nav-message-link">Messages <span class="nav-unread" id="navUnread">3</span></a><a href="profile.html">Dashboard</a></nav>
+<div class="nav-user"><span class="status-dot"></span><span>Online</span><img src="https://i.pravatar.cc/80?img=59" alt="Profile"></div><button class="project-menu" id="projectMenu">☰</button>
+</div></header>
+
+<main class="workspace">
+<section class="workspace-head">
+<div><div class="eyebrow">WORKSPACE / ORDERS</div><h1>My Orders & <span>Projects</span></h1><p>Move accepted proposals into active contracts, track milestones, and manage delivery from one workspace.</p></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="secondary-btn" href="messages.html">✉ Messages</a><a class="primary-btn" href="find-jobs.html"><i>＋</i> Find a new project</a></div>
+</section>
+
+<section class="metric-grid" id="orderMetrics"></section>
+
+<section class="toolbar">
+<div class="searchbox"><span>⌕</span><input id="projectSearch" placeholder="Search projects, clients, freelancers..."></div>
+<div class="segmented" id="statusFilter">
+<button class="active" data-status="all">All</button><button data-status="active">Active</button><button data-status="pending">Pending</button><button data-status="completed">Completed</button><button data-status="cancelled">Cancelled</button>
+</div>
+<select id="projectSort"><option value="updated">Recently updated</option><option value="deadline">Deadline</option><option value="budget">Budget</option></select>
+</section>
+
+<section class="project-layout">
+<div>
+<div class="section-title"><div><h2>Project pipeline</h2><p id="resultLabel">Showing all projects</p></div><button class="icon-btn" id="resetProjects" title="Reset demo data">↻</button></div>
+<div class="project-list" id="projectList"></div>
+</div>
+<aside class="side-panel">
+<div class="side-head"><div><h3>Project health</h3><p>Across your active contracts</p></div><span class="pulse">LIVE</span></div>
+<div id="healthChart" class="health-chart"></div>
+<div class="legend"><span><i class="l-active"></i>On track</span><span><i class="l-risk"></i>Needs attention</span></div>
+<div class="tip"><b>Workflow tip</b><p>Use milestones to make scope visible. Once every milestone is complete, submit the final delivery for client review.</p></div>
+</aside>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="project.js"></script>
+</body></html>

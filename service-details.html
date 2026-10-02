@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details — Skillora</title>
+
+    <meta name="description" content="View the full details of this service on Skillora.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body data-page="service-details">
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+            <span>Skill<span>ora</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#marketplace">Marketplace</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="profile.html" class="dash-nav-link">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="my-services.html" class="login-btn">My Services</a>
+            <a href="create-service.html" class="register-btn">+ New Service</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#marketplace">Marketplace</a>
+        <a href="profile.html">Dashboard</a>
+        <a href="my-services.html">My Services</a>
+    </div>
+</header>
+
+<div class="page-banner">
+    <div class="breadcrumb"><a href="my-services.html">My Services</a> / <span id="sdCategory"></span></div>
+    <h1 id="sdTitle" style="font-size:22px;"></h1>
+</div>
+
+<div class="service-details-layout" id="sdContent">
+
+    <div>
+        <img id="sdImage" class="service-cover" src="" alt="Service cover">
+
+        <div class="panel">
+            <div class="panel-head"><div><h2>About This Service</h2></div></div>
+            <p id="sdDescription" style="color:#aab0c4; font-size:13px; line-height:1.8;"></p>
+
+            <div class="service-tags-row" id="sdTags"></div>
+        </div>
+    </div>
+
+    <aside class="service-order-box">
+        <div class="price-line">
+            <span style="color:var(--muted); font-size:12px;">Starting at</span>
+            <strong id="sdPrice"></strong>
+        </div>
+
+        <div class="order-meta-row">
+            <span>Delivery Time</span>
+            <strong id="sdDelivery"></strong>
+        </div>
+
+        <div class="seller-mini">
+            <img id="sdSellerAvatar" src="" alt="Seller">
+            <div>
+                <strong id="sdSellerName"></strong>
+                <span id="sdSellerTitle"></span>
+            </div>
+        </div>
+
+        <div class="form-actions" style="margin-top:16px;">
+            <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;">Continue ($<span id="sdPrice2"></span>)</a>
+        </div>
+
+        <div class="form-actions">
+            <a href="#" id="sdEditLink" class="btn btn-secondary btn-small" style="flex:1; justify-content:center;">
+                <i class="fa-solid fa-pen"></i> Edit
+            </a>
+            <a href="my-services.html" class="btn btn-secondary btn-small" style="flex:1; justify-content:center;">
+                Back
+            </a>
+        </div>
+    </aside>
+
+</div>
+
+<footer id="about">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                <span>Skill<span>ora</span></span>
+            </a>
+            <p>Skillora connects businesses with talented professionals from around the world.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Skillora. All rights reserved.</span>
+        <span>Made for ambitious teams &amp; talented professionals.</span>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Success</span>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Service — Skillora</title>
+
+    <meta name="description" content="Create a new service or gig on Skillora.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body data-page="create-service">
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+            <span>Skill<span>ora</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#marketplace">Marketplace</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="profile.html" class="active dash-nav-link">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="freelancer-profile.html" class="login-btn">Public Profile</a>
+            <a href="my-services.html" class="register-btn">My Services</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#marketplace">Marketplace</a>
+        <a href="orders.html">Orders & Projects</a>
+        <a href="freelancer-profile.html">Public Profile</a>
+        <a href="my-services.html">My Services</a>
+    </div>
+</header>
+
+<div class="page-banner">
+    <div class="breadcrumb"><a href="orders.html">Orders & Projects</a> / <a href="my-services.html">My Services</a> / Create Service</div>
+    <h1 id="csHeading">Create a New Service</h1>
+    <p id="csSubheading">Fill in the details below to publish a new service on the marketplace.</p>
+</div>
+
+<div class="dash-shell">
+
+    <aside class="dash-sidebar">
+        <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+        <a href="edit-profile.html"><i class="fa-solid fa-pen"></i> Edit Profile</a>
+        <hr>
+        <a href="my-services.html"><i class="fa-solid fa-briefcase"></i> My Services</a>
+        <a href="create-service.html" class="active"><i class="fa-solid fa-plus"></i> Create Service</a>
+        <hr>
+        <a href="freelancer-profile.html"><i class="fa-solid fa-eye"></i> Public Profile</a>
+    </aside>
+
+    <main class="dash-main">
+
+        <form class="panel" id="createServiceForm" novalidate>
+
+            <div class="panel-head">
+                <div>
+                    <h2>Service Image</h2>
+                    <p>A clear cover image helps clients understand your service.</p>
+                </div>
+            </div>
+
+            <div class="upload-row">
+                <img id="csImagePreview" class="upload-preview wide" src="" alt="Service image preview">
+
+                <div class="upload-btn-wrap">
+                    <label for="csImageInput" class="btn btn-secondary btn-small">
+                        <i class="fa-solid fa-upload"></i> Upload Image
+                    </label>
+                    <input type="file" id="csImageInput" accept="image/*">
+                </div>
+            </div>
+
+            <div class="panel-head">
+                <div><h2>Service Details</h2></div>
+            </div>
+
+            <div class="form-group">
+                <label for="csTitle">Service Title</label>
+                <input type="text" id="csTitle" placeholder="I will build a full-stack MERN web application">
+                <span class="field-error">Title should be at least 10 characters.</span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="csCategory">Category</label>
+                    <select id="csCategory">
+                        <option value="">Select a category</option>
+                        <option>Web Development</option>
+                        <option>Mobile Development</option>
+                        <option>Graphic Design</option>
+                        <option>Digital Marketing</option>
+                        <option>Data Analysis</option>
+                        <option>Video Editing</option>
+                        <option>Content Writing</option>
+                    </select>
+                    <span class="field-error">Please select a category.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="csDelivery">Delivery Time</label>
+                    <input type="text" id="csDelivery" placeholder="e.g. 3 Days">
+                    <span class="field-error">Please enter a delivery time.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="csDescription">Description</label>
+                <textarea id="csDescription" placeholder="Describe exactly what you'll deliver..."></textarea>
+                <span class="field-error">Description should be at least 30 characters.</span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="csPrice">Starting Price (USD)</label>
+                    <input type="number" id="csPrice" min="1" placeholder="e.g. 40">
+                    <span class="field-error">Please enter a price greater than 0.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="csTags">Skills / Tags</label>
+                    <input type="text" id="csTags" placeholder="e.g. React, Node.js, MongoDB">
+                    <span class="hint">Separate each tag with a comma.</span>
+                    <span class="field-error">Please add at least one tag.</span>
+                    <div class="chip-preview" id="csTagPreview"></div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="csSubmitBtn"><i class="fa-solid fa-check"></i> Publish Service</button>
+                <a href="my-services.html" class="btn btn-secondary">Cancel</a>
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+<footer id="about">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                <span>Skill<span>ora</span></span>
+            </a>
+            <p>Skillora connects businesses with talented professionals from around the world.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Skillora. All rights reserved.</span>
+        <span>Made for ambitious teams &amp; talented professionals.</span>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Success</span>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Skillora — Advanced Dashboard</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="marketplace.css"><link rel="stylesheet" href="advanced-dashboard.css"></head>
+<body data-page="advanced-dashboard"><header class="navbar"><div class="nav-container">
+<a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-bolt"></i></span><span>Skill<span>ora</span></span></a>
+<nav class="desktop-nav"><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="find-jobs.html">Find Jobs</a><a href="messages.html">Messages</a><a href="advanced-dashboard.html" class="active">Dashboard</a></nav>
+<div class="nav-actions"><a class="login-btn nav-ghost" href="marketplace.html">Explore Marketplace</a><button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button></div></div>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="find-jobs.html">Find Jobs</a><a href="messages.html">Messages</a><a href="advanced-dashboard.html">Dashboard</a></div></header>
+<main class="dash7-wrap">
+<div class="dash7-head"><div><span class="eyebrow">PERSONAL WORKSPACE</span><h1>Dashboard</h1><p>Track marketplace activity, saved opportunities and project momentum.</p></div>
+<div class="role-switch"><button class="active" data-role="freelancer"><i class="fa-solid fa-laptop-code"></i> Freelancer</button><button data-role="client"><i class="fa-solid fa-briefcase"></i> Client</button></div></div>
+<section class="welcome-card"><div><span class="eyebrow">GOOD MORNING</span><h2>Welcome back, <span id="dashName">Hasaan</span>.</h2><p id="roleSummary">Manage your services, active projects, reviews and earnings from one workspace.</p></div><a href="marketplace.html" class="btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Explore marketplace</a></section>
+<section class="metric-grid" id="metricGrid"></section>
+<div class="dashboard-grid">
+<div class="dash-main-col">
+<section class="dash-panel"><div class="panel-title"><div><span class="eyebrow">WORKFLOW</span><h2>Project pipeline</h2></div><a href="orders.html">View all</a></div><div class="pipeline" id="pipeline"></div></section>
+<section class="dash-panel"><div class="panel-title"><div><span class="eyebrow">SAVED</span><h2>My Favorites</h2></div><a href="marketplace.html?favorites=1">View all</a></div><div id="favoritesPreview" class="favorite-preview"></div></section>
+</div>
+<aside class="dash-side-col"><section class="dash-panel"><div class="panel-title"><div><span class="eyebrow">INSIGHTS</span><h2>Marketplace stats</h2></div></div><div id="insights"></div></section>
+<section class="dash-panel quick-panel"><div class="panel-title"><div><span class="eyebrow">SHORTCUTS</span><h2>Quick actions</h2></div></div><a href="create-service.html"><i class="fa-solid fa-plus"></i> Create a service</a><a href="post-job.html"><i class="fa-solid fa-bullhorn"></i> Post a job</a><a href="messages.html"><i class="fa-regular fa-message"></i> Open messages</a></section></aside>
+</div>
+</main><div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i><span></span></div><script src="advanced-dashboard.js"></script></body></html>

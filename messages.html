@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Skillora Week 6 messaging and notification center">
+<title>Messages & Notifications | Skillora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
+<link rel="stylesheet" href="messages.css">
+</head>
+<body class="project-page messages-page">
+<header class="project-nav">
+  <div class="project-nav-inner">
+    <a class="project-brand" href="index.html"><span class="brand-mark">S</span>Skill<span>ora</span></a>
+    <nav>
+      <a href="find-jobs.html">Find Jobs</a>
+      <a href="my-proposals.html">Proposals</a>
+      <a href="orders.html">Orders & Projects</a>
+      <a class="active" href="messages.html">Messages <span class="nav-unread" id="navUnread">3</span></a>
+      <a href="profile.html">Dashboard</a>
+    </nav>
+    <div class="nav-user"><span class="status-dot"></span><span>Online</span><img src="https://i.pravatar.cc/80?img=59" alt="Profile"></div>
+    <button class="project-menu" id="projectMenu" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main class="workspace communication-workspace">
+  <section class="workspace-head">
+    <div>
+      <div class="eyebrow">WORKSPACE / COMMUNICATION</div>
+      <h1>Messages & <span>Notifications</span></h1>
+      <p>Chat with clients and freelancers, track project events, and keep every important update in one place.</p>
+    </div>
+    <div class="communication-actions">
+      <button class="secondary-btn" id="markAllRead">✓ Mark all read</button>
+      <a class="primary-btn" href="orders.html">View projects →</a>
+    </div>
+  </section>
+
+  <section class="communication-stats" id="communicationStats"></section>
+
+  <section class="communication-grid">
+    <aside class="conversation-panel panel">
+      <div class="panel-head conversation-head">
+        <div><h2>Conversations</h2><p id="conversationCount">3 active threads</p></div>
+        <button class="icon-btn" id="newConversation" title="Start a conversation">＋</button>
+      </div>
+      <div class="message-search"><span>⌕</span><input id="conversationSearch" placeholder="Search conversations..."></div>
+      <div class="conversation-list" id="conversationList"></div>
+    </aside>
+
+    <section class="chat-panel panel">
+      <div class="chat-header" id="chatHeader"></div>
+      <div class="chat-context" id="chatContext"></div>
+      <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+      <div class="typing-state" id="typingState"></div>
+      <form class="message-composer" id="messageForm">
+        <button type="button" class="attach-btn" id="attachBtn" title="Attach a file">＋</button>
+        <textarea id="messageInput" rows="1" maxlength="1000" placeholder="Write a message... (Enter to send, Shift+Enter for a new line)" required></textarea>
+        <button class="send-btn" type="submit">Send <span>↗</span></button>
+      </form>
+      <div class="composer-hint"><span id="charCount">0</span>/1000 · Messages are saved locally in this demo.</div>
+    </section>
+
+    <aside class="notification-panel panel">
+      <div class="panel-head">
+        <div><h2>Notification center</h2><p>Project events and account updates</p></div>
+        <span class="notification-count" id="notificationCount">0</span>
+      </div>
+      <div class="notification-filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="unread">Unread</button>
+        <button data-filter="project">Projects</button>
+        <button data-filter="message">Messages</button>
+      </div>
+      <div class="notification-list" id="notificationList"></div>
+    </aside>
+  </section>
+
+  <section class="trust-strip">
+    <div><span class="trust-icon">✓</span><div><b>Project-linked communication</b><p>Messages can be opened directly from a project workspace.</p></div></div>
+    <div><span class="trust-icon">★</span><div><b>Feedback after completion</b><p>Completed projects unlock the review and rating workflow.</p></div></div>
+    <div><span class="trust-icon">⌁</span><div><b>Persistent demo state</b><p>Chats, notifications and reviews survive page refreshes.</p></div></div>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="messages.js"></script>
+</body>
+</html>
